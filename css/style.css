@@ -1,0 +1,131 @@
+*,::after,::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'montserrat', sans-serif;
+}
+
+body{
+  min-height: 100vh;
+  display: grid;
+  padding: 0 1rem;
+}
+
+.lobster{font-family: "Lobster", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+.btn {border: #DEBB4D solid 3px;
+border-radius: 50px;
+color: black;
+font-weight:bold ;
+}
+
+.bg{background-color: #DEBB4D ;
+height: auto;
+}
+
+.text{text-align: justify;color: white;
+}
+
+.title-or{color: #DEBB4D;
+}
+
+.bg-contact{background-image: url(/lamarlonance/Image/img-devis.png);
+background-position: center;
+background-repeat: no-repeat;
+height: 700px;
+width: 100%;
+position: relative;
+}
+
+.radius {border-radius: 0px 50px;
+}
+
+.card{box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 0px 0px 50px 0px;
+height: 350px;
+}
+
+
+.contact {display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 27px 20px;
+gap: 10px;
+position: absolute;
+width: 100%;
+height: 90px;
+left: -5px;
+top: 200px;
+background: rgba(245, 245, 245, 0.5);
+}
+
+.btn-contact {
+box-sizing: border-box;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 20px 30px;
+gap: 10px;
+position: absolute;
+width: 274px;
+height: 69px;
+left: 630px;
+top: 400px;
+background: rgba(255, 255, 255, 0.5);
+border: 3px solid #DEBB4D;
+border-radius: 50px;
+color: black;
+text-decoration: none;
+font-size: 24px ;
+font-weight: bold;
+}
+
+.danseur{width: 100%;
+height: 20px;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 0.4em;
+margin-bottom: 100px;
+}
+
+.waves h1 {
+text-align: center;
+font-size: 4rem;
+text-transform: uppercase;
+font-weight: 400;
+position: absolute;
+top: 30%;
+left: 31%;
+transform: translate(-50%, -50%);
+}
+
+.waves h1:nth-child(1){
+color: transparent; 
+-webkit-text-stroke: 0.5px #DEBB4D;
+}
+
+.waves h1:nth-child(2){
+color: #DEBB4D;
+-webkit-text-stroke: 3px #DEBB4D;
+animation: text 3s ease-in-out infinite;
+}
+
+@keyframes text {
+  0% {
+    clip-path: polygon(10% 65%, 15% 74%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100% );
+  }
+  50% {
+       clip-path: polygon(0% 60%, 16% 65%, 35% 66%, 60% 70%, 70% 50%, 87% 40%, 100% 30%, 100% 100%, 0% 100%);
+     }
+ 100% {
+      clip-path: polygon(10% 65%, 15% 74%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+ }
+}
