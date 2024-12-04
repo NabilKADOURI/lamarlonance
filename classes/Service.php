@@ -1,67 +1,85 @@
 <?php
-require_once __DIR__ . '/../classes/Db.php';
 
+require_once __DIR__ . '/../classes/Db.php';
 
 class Service
 {
+    /**
+     * Récupère tous les services.
+     *
+     * @return array Liste de tous les services
+     */
+    public static function getServiceAll(): array
+    {
+        $pdo = Db::getConnection();
 
-  public static function getServiceAll()
-  {
+        $sql = 'SELECT * FROM services';
 
-    $pdo = Db::getConnection();
+        $stmt = $pdo->query($sql);
 
-    $sql = 'SELECT * FROM services';
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 
-    $stmt = $pdo->query($sql);
+    /**
+     * Récupère un service spécifique par ID.
+     *
+     * @param int $id L'ID du service à récupérer
+     * @return array Les détails du service
+     */
+    public static function getService(int $id): array
+    {
+        $pdo = Db::getConnection();
 
-    return $stmt->fetchAll(PDO::FETCH_ASSOC);
-  }
+        $sql = 'SELECT * FROM services WHERE id_services = :id';
 
-  public static function getService(int $id)
-  {
+        $stmt = $pdo->prepare($sql);
 
-    $pdo = Db::getConnection();
+        $stmt->execute(['id' => $id]);
 
-    $sql = 'SELECT * FROM services WHERE id_services = :id';
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
 
+    /**
+     * Supprime un service spécifique par ID.
+     * Supprime également l'image associée au service.
+     *
+     * @param int $id L'ID du service à supprimer
+     */
+    public static function getDeleteService(int $id): void
+    {
+        $pdo = Db::getConnection();
 
-    $stmt = $pdo->prepare($sql);
+        $service = self::getService($id);
 
-    $stmt->execute(['id' => $id]);
+        if ($service && !empty($service['picture_services'])) {
+            // Supprimer le fichier image associé au service
+            unlink(__DIR__ . '/../uploads/' . $service['picture_services']);
+        }
 
-    return $stmt->fetch(PDO::FETCH_ASSOC);
-  }
+        $sql = 'DELETE FROM services WHERE id_services = :id';
 
-  public static function getDeleteService(int $id)
-  {
+        $stmt = $pdo->prepare($sql);
 
-    $pdo = Db::getConnection();
+        $stmt->execute(['id' => $id]);
+    }
 
-    $service = Service:: getService($id);
+    /**
+     * Insère un nouveau service dans la base de données.
+     *
+     * @param string $filename Le nom du fichier image à associer au service
+     */
+    public static function getInsertService(string $filename): void
+    {
+        $pdo = Db::getConnection();
 
-    unlink('uploads/' . $service['picture_services']);
+        $sql = 'INSERT INTO services (title_services, description_services, picture_services) VALUES (:titre, :description, :image)';
 
-    $sql = 'DELETE FROM services WHERE id_services = :id';
+        $stmt = $pdo->prepare($sql);
 
-    $stmt = $pdo->prepare($sql);
-
-    $stmt->execute(['id' => $id]);
-  }
-
-  public static function getInsertService(string $filename)
-  {
-
-    $pdo = Db::getConnection();
-
-    $sql = 'INSERT INTO services (`title_services`,description_services,`picture_services`) VALUES (:titre,:description,:image)';
-
-    $stmt = $pdo->prepare($sql);
-
-    $stmt->execute([
-      'titre' => $_POST['title'],
-      'description' => $_POST['description'],
-      'image' => $filename
-    ]);
-  }
-
+        $stmt->execute([
+            'titre' => $_POST['title'],
+            'description' => $_POST['description'],
+            'image' => $filename
+        ]);
+    }
 }
