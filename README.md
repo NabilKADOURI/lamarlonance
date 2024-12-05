@@ -1,4 +1,4 @@
-# **Lamrlonance**
+# **Lamarlonance**
 
 ## **Description**
 Lamrlonance est un site vitrine conçu pour un chorégraphe professionnel. Il présente ses prestations avec un visuel attrayant sous forme de photos dynamiques, un espace dédié pour les contacts, une section "À propos", et une interface d'administration.
