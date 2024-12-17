@@ -1,11 +1,5 @@
-<?php
-
-require_once "functions/getMessage.php";
-?>
-<div style="width: 100%; height:86px;" >
-
-</div>
-<nav class="navbar navbar-expand-lg shadow  fixed-top bg bg-white mb-3">
+<div style="width: 100%; height:86px;"></div>
+<nav class="navbar navbar-expand-lg shadow fixed-top bg-white mb-3">
   <div class="container">
     <a class="navbar-brand mt-2 mt-lg-0" href="#">
       <img src="/lamarlonance/Image/logo-lamarlonance.png" height="60" alt="Logo lamarlonance" loading="lazy" />
@@ -33,5 +27,4 @@ require_once "functions/getMessage.php";
       </ul>
     </div>
   </div>
- 
 </nav>
