@@ -12,7 +12,7 @@ require_once __DIR__ . '/classes/Service.php';
     <!-- partie hero -->
     <header>
         <div class="container">
-            <div class="row justify-content-center align-items-center my-3">
+            <div class="row justify-content-center align-items-center my-3 pt-5">
                 <div class="col-lg-8 col-md-6 col-12 text-center my-4 order-sm-2 order-lg-0">
                     <div class="mb-5">
                         <h1 class="title-or display-1">Lamarlonance</h1>
@@ -26,7 +26,7 @@ require_once __DIR__ . '/classes/Service.php';
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-12 d-flex justify-content-center order-sm-1 ">
+                <div class="col-lg-4 col-md-6 col-12 d-flex justify-content-center order-sm-1 mt-5 ">
                     <img class="img-fluid" src="/lamarlonance/Image/fond-marlon.png" alt="fond Marlon" height="400px" width="400px" />
                 </div>
             </div>

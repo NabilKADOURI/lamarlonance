@@ -1,30 +1,25 @@
-<div style="width: 100%; height:86px;"></div>
-<nav class="navbar navbar-expand-lg shadow fixed-top bg-white mb-3">
-  <div class="container">
-    <a class="navbar-brand mt-2 mt-lg-0" href="#">
-      <img src="/lamarlonance/Image/logo-lamarlonance.png" height="60" alt="Logo lamarlonance" loading="lazy" />
+<!-- Navbar Responsive en Tailwind CSS -->
+<nav id="navbar" class="fixed w-full z-50 transition duration-300 m-auto ">
+  <div class="container mx-auto px-4 py-4 flex justify-between items-center ">
+    <!-- Logo -->
+    <a href="#" class="flex items-center">
+      <img src="/lamarlonance/Image/logo-lamarlonance.png" class="h-12 " alt="Logo lamarlonance" loading="lazy" />
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+
+    <!-- Toggle Button (Menu Burger) -->
+    <button id="menu-toggle" class="block lg:hidden text-gray-800 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
     </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex gap-5">
-        <li class="nav-item">
-          <a class="nav-link lobster" href="index.php">Accueil</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link lobster" href="#prestations">Prestation</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link lobster" href="#">Galerie</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link lobster" href="about.php">A propos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link lobster" href="contact.php">Contact</a>
-        </li>
-      </ul>
-    </div>
+  </div>
+
+  <!-- Menu Links -->
+  <div id="menu" class="hidden lg:flex flex-col lg:flex-row lg:items-center bg-white lg:bg-transparent lg:gap-6">
+    <a href="index.php" class="block py-2 px-4 text-gray-700 hover:text-yellow-500 transition duration-200">Accueil</a>
+    <a href="#prestations" class="block py-2 px-4 text-gray-700 hover:text-yellow-500 transition duration-200">Prestation</a>
+    <a href="#" class="block py-2 px-4 text-gray-700 hover:text-yellow-500 transition duration-200">Galerie</a>
+    <a href="about.php" class="block py-2 px-4 text-gray-700 hover:text-yellow-500 transition duration-200">A propos</a>
+    <a href="contact.php" class="block py-2 px-6 text-white bg-yellow-500 rounded-full hover:bg-yellow-600 transition duration-300 font-bold text-center">Contact</a>
   </div>
 </nav>

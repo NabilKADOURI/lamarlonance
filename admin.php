@@ -13,9 +13,6 @@ require_once 'layout/header.php';
 ?>
 
 <main class="d-flex w-100">
-
-  
-
   <div class="container d-flex justify-content-center align-items-center ">
     <form method="POST" action="admin-process.php">
       <div class="d-flex flex-column justify-content-center ">

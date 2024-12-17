@@ -1,134 +1,60 @@
-body{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'montserrat', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  text-decoration: none;
-  list-style: none;
-  scroll-behavior: smooth;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply box-border m-0 p-0 font-sans font-normal leading-relaxed scroll-smooth;
 }
 
 html {
-  
-  overflow-x: hidden;
+  @apply overflow-x-hidden;
 }
 
-ul,h1,h2{
-  font-family: "Lobster", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  text-decoration: none;
-  list-style: none;
+ul, h1, h2 {
+  @apply font-lobster font-normal;
 }
 
-a{
-  text-decoration: none;
+a {
+  @apply no-underline;
 }
 
-.custom-button {border: #DEBB4D solid 3px;
-border-radius: 50px;
-color: black;
-font-weight:bold ;
-padding: 20px 40px;
+.custom-button {
+  @apply border-3 border-[#DEBB4D] rounded-full text-black font-bold py-5 px-10 hover:bg-[#DEBB4D] hover:text-white transition duration-300;
 }
 
-.custom-button:hover {
-  background-color: #DEBB4D;
-  color: white;
+.bg {
+  @apply bg-[#DEBB4D];
 }
 
-
-.bg{background-color: #DEBB4D ;
-  
+.text {
+  @apply text-white text-justify;
 }
 
-.text{
-  text-align: justify;
-  color: white;
+.title-or {
+  @apply text-[#DEBB4D];
 }
 
-.title-or{color: #DEBB4D;
+.radius {
+  @apply rounded-none rounded-br-[50px];
 }
 
-
-
-.radius {border-radius: 0px 50px;
+.card {
+  @apply shadow-md rounded-b-[50px] h-[350px];
 }
-
-.card{box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 0px 0px 50px 0px;
-height: 350px;
-
-}
-
-
 
 .bg-contact {
-  background-image: url(/lamarlonance/Image/img-devis.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  background-image: url('/lamarlonance/Image/img-devis.png');
+  @apply bg-center bg-no-repeat bg-cover h-screen flex flex-col justify-center items-center relative;
 }
 
-/* Styles pour le texte de contact */
 .contact {
-  padding: 20px;
-  background: rgba(245, 245, 245, 0.8);
-  text-align: center;
-  padding: 20px 200px;
-  margin-bottom: 100px;
-  max-width: 100%;
-  max-height: 20%; 
+  @apply p-5 bg-gray-100/80 text-center mb-24 max-w-full max-h-[20%];
 }
 
-/* Styles pour le bouton */
 .position-button {
-  font-size: 24px;
-  background: rgba(245, 245, 245, 0.8);
-  padding: 10px 20px;
-  text-decoration: none;
-  color: black;
-  transition: background-color 0.3s ease;
+  @apply text-xl bg-gray-100/80 py-2 px-4 text-black transition duration-300 hover:bg-gray-200;
 }
 
 .text-responsive {
-  font-size: 1.25rem; 
+  @apply text-lg md:text-base lg:text-sm lg:w-60;
 }
-
-@media (max-width: 992px) {
-  .text-responsive {
-    font-size: 1rem; 
-  }
-}
-
-@media (max-width: 768px) {
-  .text-responsive {
-    font-size: 0.875rem;
-    width: 15rem;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

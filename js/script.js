@@ -1,2 +1,19 @@
+ // Menu burger
+ document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+});
+
+// Navbar transparente au scroll
+window.addEventListener('scroll', () => {
+  const navbar = document.getElementById('navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('bg-white', 'shadow');
+  } else {
+    navbar.classList.remove('bg-white', 'shadow');
+  }
+});
