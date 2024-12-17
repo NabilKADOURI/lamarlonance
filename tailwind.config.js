@@ -2,21 +2,25 @@
 module.exports = {
   content: [
     "./*.php",
-    "./**/*.php", 
-    "./*layout.php",
+    "./**/*.php",
+    "./src/**/*.{php,html,js}",
+    "./layout/**/*.php",
     "./functions/**/*.php",
     "./template/**/*.php",
     "./uploads/**/*.php",
+    "./js/**/*.js",
     "./css/**/*.css",
-    "./js/**/*.js" 
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        titre : "#DEBB4D",
+        nav: "#3A393C"
+      },
+    },
   },
   plugins: [
     require('flowbite/plugin'),
-    require('tailwindcss-textshadow'),
-    require('@tailwindcss/line-clamp')
   ],
 }
 

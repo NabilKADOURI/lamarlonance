@@ -2,59 +2,114 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply box-border m-0 p-0 font-sans font-normal leading-relaxed scroll-smooth;
+/* ============================
+   TAILWIND CUSTOM COMPONENTS
+   ============================ */
+
+@layer base {
+  
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-titre text-titre;
+  }
+  h1 {
+    @apply text-4xl md:text-5xl font-bold leading-tight;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl font-semibold leading-snug;
+  }
+
+  h3 {
+    @apply text-2xl font-medium leading-snug;
+  }
+
+  p {
+    @apply font-texte text-lg md:text-xl text-texte leading-relaxed;
+  }
+
+  a {
+    @apply text-titre hover:text-titre transition-colors duration-300 underline;
+  }
 }
 
-html {
-  @apply overflow-x-hidden;
+@layer components {
+  /* Buttons */
+  .btn-primary {
+    @apply bg-titre text-white font-semibold py-2 px-4 rounded-lg shadow-md 
+    hover:bg-titre focus:outline-none focus:ring-2 focus:ring-yellow-400;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-800 font-medium py-2 px-4 rounded-lg shadow-sm 
+    hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400;
+  }
+
+  /* Cards */
+  .card {
+    @apply bg-white rounded-lg shadow-lg p-6 transition-transform transform 
+    hover:scale-105 hover:shadow-[0_4px_10px_rgba(222,187,77,0.6)];
+  }
+
+  .card-title {
+    @apply text-2xl font-semibold text-titre mb-4;
+  }
+
+  .card-content {
+    @apply text-texte text-base leading-relaxed;
+  }
+
+  /* Sections */
+  .section {
+    @apply w-full py-16 px-6 md:px-12 lg:px-20 bg-titre text-white;
+  }
+
+  .section-dark {
+    @apply bg-black text-white py-16 px-6 md:px-12 lg:px-20;
+  }
+
+  /* Input Fields */
+  .input-field {
+    @apply block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300
+    rounded-lg focus:border-yellow-600 focus:ring focus:ring-yellow-400;
+  }
+
+  .form-label {
+    @apply text-sm font-medium text-gray-600 mb-2 block;
+  }
 }
 
-ul, h1, h2 {
-  @apply font-lobster font-normal;
+@layer utilities {
+  /* Spacing */
+  .space-y-default {
+    @apply space-y-4 md:space-y-6 lg:space-y-8;
+  }
+
+  /* Full screen utility */
+  .full-screen {
+    @apply w-full min-h-screen;
+  }
 }
 
-a {
-  @apply no-underline;
+
+
+.font-titre {
+  font-family: 'Lobster', sans-serif;
 }
 
-.custom-button {
-  @apply border-3 border-[#DEBB4D] rounded-full text-black font-bold py-5 px-10 hover:bg-[#DEBB4D] hover:text-white transition duration-300;
+.font-texte {
+  font-family: 'Montserrat', sans-serif;
 }
 
-.bg {
-  @apply bg-[#DEBB4D];
+/* Couleurs globales */
+.text-titre {
+  color: var(--color-titre);
 }
 
-.text {
-  @apply text-white text-justify;
+.bg-titre {
+  background-color: var(--color-titre);
 }
 
-.title-or {
-  @apply text-[#DEBB4D];
-}
-
-.radius {
-  @apply rounded-none rounded-br-[50px];
-}
-
-.card {
-  @apply shadow-md rounded-b-[50px] h-[350px];
-}
-
-.bg-contact {
-  background-image: url('/lamarlonance/Image/img-devis.png');
-  @apply bg-center bg-no-repeat bg-cover h-screen flex flex-col justify-center items-center relative;
-}
-
-.contact {
-  @apply p-5 bg-gray-100/80 text-center mb-24 max-w-full max-h-[20%];
-}
-
-.position-button {
-  @apply text-xl bg-gray-100/80 py-2 px-4 text-black transition duration-300 hover:bg-gray-200;
-}
-
-.text-responsive {
-  @apply text-lg md:text-base lg:text-sm lg:w-60;
+.text-texte {
+  color: var(--color-texte);
 }
