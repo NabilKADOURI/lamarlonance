@@ -3,7 +3,7 @@
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between container mx-auto p-2">
       <!-- Logo -->
       <a href="#" id="logo" class="flex items-center space-x-3 ">
-        <img src="/lamarlonance/image/logo-lamarlonance.webp" class="h-10 md:h-52
+        <img src="/Image/logo-lamarlonance.webp" class="h-12 
         " alt="Logo lamarlonance" />
         <span class="self-center text-2xl font-semibold text-gray-800"></span>
       </a>

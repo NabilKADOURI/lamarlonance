@@ -73,16 +73,19 @@ composer install
 ## **Afficher les photos dynamiques (Twig)**
 
 ```html
-<div class="col-lg-3 col-md-5 d-flex justify-content-around mb-4" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
-    <div class="card d-flex align-items-center" style="width: 18rem;">
-        <img src="uploads/<?php echo $item['picture_services']; ?>" class="img-fluid" alt="<?php echo $item['title_services'];?>" />
-        <div class="card-body d-flex align-items-center ">
-            <h3 class="card-title text-center ">
-                <a class="text-decoration-none text-dark fw-bold" href="prestation.php?id=<?php echo $item['id_services']; ?>"><?php echo $item['title_services']; ?></a>
+<div class="w-full md:w-1/2 lg:w-1/4 p-4" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="uploads/{{ $item['picture_services'] }}" alt="{{ $item['title_services'] }}" class="w-full h-48 object-cover">
+        <div class="p-4">
+            <h3 class="text-lg font-bold text-center">
+                <a href="prestation.php?id={{ $item['id_services'] }}" class="text-gray-800 hover:text-yellow-500">
+                    {{ $item['title_services'] }}
+                </a>
             </h3>
         </div>
     </div>
 </div>
+
 ```
 ## **Traitement du formulaire de contact (PHP)**
 ```php

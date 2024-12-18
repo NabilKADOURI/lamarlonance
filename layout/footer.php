@@ -7,7 +7,7 @@
         
         <!-- Logo -->
         <div class="flex justify-center lg:justify-start">
-          <img src="/lamarlonance/Image/footer_img.png" alt="photo marlon" class="h-32 w-auto">
+          <img src="/Image/logo-lamarlonance.webp" alt="photo marlon" class="h-32 w-auto">
         </div>
 
         <!-- Informations de contact -->

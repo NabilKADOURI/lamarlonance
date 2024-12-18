@@ -9,20 +9,32 @@ $service = Service::getService($id);
 
 ?>
 
-<main class="border-top border-bottom border-black border-3  mb-4">
-    <div class="container ">
-        <div class="row align-items-center ">
-                <div class="col-lg-4 my-4 " data-aos="fade-right">
-                    <div>
-                        <img class="rounded-4" src="uploads/<?php echo $service['picture_services'];?>" alt="<?php echo $service['title_services']; ?>" width="400px" height="300px" />
-                    </div>
+<main class="border-t-4 border-b-4 border-black mb-8">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-wrap items-center">
+            <!-- Image de service -->
+            <div class="w-full lg:w-1/3 my-6" data-aos="fade-right">
+                <div>
+                    <img 
+                        class="rounded-lg shadow-lg" 
+                        src="uploads/<?php echo $service['picture_services']; ?>" 
+                        alt="<?php echo $service['title_services']; ?>" 
+                        width="400" 
+                        height="300"
+                    />
                 </div>
-                <div class=" col-lg-8 col-md-12 my-5 justify-content-center " data-aos="fade-left">
-                    <h1 class="title-or "><?php echo $service['title_services']; ?></h1>
-                    <p><?php echo $service['description_services']; ?></p>
-                </div>
+            </div>
+            <!-- Description de service -->
+            <div class="w-full lg:w-2/3 my-6" data-aos="fade-left">
+                <h1 class="text-yellow-600 text-3xl font-bold mb-4">
+                    <?php echo $service['title_services']; ?>
+                </h1>
+                <p class="text-gray-700 text-lg">
+                    <?php echo $service['description_services']; ?>
+                </p>
+            </div>
         </div>
     </div>
 </main>
 
-<?php require_once 'layout/footer.php';
+<?php require_once 'layout/footer.php'; ?>

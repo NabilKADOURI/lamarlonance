@@ -13,14 +13,17 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors:{
-        titre : "#DEBB4D",
-        nav: "#3A393C"
+      colors: {
+        titre: "#DEBB4D", // Couleur pour les titres
+        texte: "#333333", // Couleur pour les textes
+        button: "#DEBB4D", // Couleur pour les boutons
+        "button-hover": "#d4a63f", // Couleur pour le survol des boutons
+      },
+      fontFamily: {
+        texte: ['Montserrat', 'sans-serif'], // Police pour les textes
+        titre: ['Lobster', 'cursive'], // Police pour les titres
       },
     },
   },
-  plugins: [
-    require('flowbite/plugin'),
-  ],
-}
-
+  plugins: [],
+};
