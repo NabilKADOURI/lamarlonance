@@ -9,7 +9,7 @@
 @layer base {
   
   /* Typography */
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2 {
     @apply font-titre text-titre;
   }
   h1 {
@@ -93,23 +93,6 @@
 
 
 
-.font-titre {
-  font-family: 'Lobster', sans-serif;
-}
-
-.font-texte {
-  font-family: 'Montserrat', sans-serif;
-}
-
-/* Couleurs globales */
-.text-titre {
-  color: var(--color-titre);
-}
-
-.bg-titre {
-  background-color: var(--color-titre);
-}
-
-.text-texte {
-  color: var(--color-texte);
+.active {
+    color: #ff6600; 
 }

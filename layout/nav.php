@@ -1,6 +1,6 @@
 <header class="sticky left-0 top-0 z-50 w-full ">
-  <nav class="bg-white border-b border-gray-200 shadow-md bg-opacity-50 backdrop-blur-md ">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between container mx-auto p-2">
+  <nav class="top-0 left-0 w-full bg-white/30 backdrop-blur-md z-50 border-b-2 border-yellow-500">
+    <div class="flex flex-wrap items-center justify-between container mx-auto py-2 lg:py-4 px-4 sm:px-6 lg:px-12">
       <!-- Logo -->
       <a href="#" id="logo" class="flex items-center space-x-3 ">
         <img src="/Image/logo-lamarlonance.webp" class="h-12 
@@ -19,17 +19,16 @@
       </button>
 
       <!-- Menu  -->
-      <div
-        id="navbar-menu"
-        class="hidden w-full sm:flex sm:w-auto sm:space-x-4 justify-center items-center ">
-        <ul class="flex flex-col sm:flex-row sm:justify-center items-center space-y-4 font-medium ">
-          <li><a href="index.php" class="block py-2 px-4 hover:text-titre">ACCEUIL</a></li>
-          <li><a href="about.php" class="block py-2 px-4 hover:text-titre active:text-titre">À PROPOS</a></li>
-          <li><a href="services.php" class="block py-2 px-4 hover:text-titre">PRESTATIONS</a></li>
-          <li><a href="pricing.php" class="block py-2 px-4 hover:text-titre">GALERIE</a></li>
-          <li><a href="contact.php" class="block py-2 px-4 hover:text-titre">CONTACT</a></li>
-        </ul>
-      </div>
+      <div id="navbar-menu" class="hidden w-full sm:flex sm:w-auto justify-center items-center">
+    <ul class="flex flex-col sm:flex-row sm:justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 font-bold text-gray-600">
+        <li><a href="index.php" class="block py-2 px-4 hover:text-titre <?php echo basename($_SERVER['SCRIPT_NAME']) == 'index.php' ? 'active' : ''; ?>">ACCUEIL</a></li>
+        <li><a href="about.php" class="block py-2 px-4 hover:text-titre <?php echo basename($_SERVER['SCRIPT_NAME']) == 'about.php' ? 'active' : ''; ?>">À PROPOS</a></li>
+        <li><a href="#prestation" class="block py-2 px-4 hover:text-titre <?php echo basename($_SERVER['SCRIPT_NAME']) == 'services.php' ? 'active' : ''; ?>">PRESTATIONS</a></li>
+        <li><a href="pricing.php" class="block py-2 px-4 hover:text-titre <?php echo basename($_SERVER['SCRIPT_NAME']) == 'pricing.php' ? 'active' : ''; ?>">GALERIE</a></li>
+        <li><a href="contact.php" class="block py-2 px-4 hover:text-titre <?php echo basename($_SERVER['SCRIPT_NAME']) == 'contact.php' ? 'active' : ''; ?>">CONTACT</a></li>
+    </ul>
+</div>
+
     </div>
   </nav>
 </header>

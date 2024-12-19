@@ -1,1 +1,15 @@
+# Node.js
 node_modules/
+npm-debug.log
+
+# Tailwind CSS
+dist/
+
+# PHP
+.env
+/vendor/
+
+# OS files
+.DS_Store
+Thumbs.db
+
