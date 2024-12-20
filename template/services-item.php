@@ -7,17 +7,11 @@
     <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-center group transition-all duration-300 hover:shadow-lg hover:scale-125">
         <!-- Image -->
         <div class="w-full h-48 overflow-hidden relative">
-        <?php
-            // Sécurisation des données dynamiques
-            $picture = htmlspecialchars($item['picture_services'] ?? 'default.jpg', ENT_QUOTES, 'UTF-8');
-            $title = htmlspecialchars($item['title_services'] ?? 'Titre non disponible', ENT_QUOTES, 'UTF-8');
-            $id = intval($item['id_services'] ?? 0);
-            ?>
             <img
                 src="uploads/<?php echo $item['picture_services']; ?>"
                 alt="<?php echo $item['title_services']; ?>"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
-                
+            <!-- Overlay (optionnel) -->
             <div class="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
         <!-- Card Body -->

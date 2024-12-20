@@ -69,12 +69,12 @@
 
             <!-- Bouton Submit -->
             <div class="text-center ">
-    <button 
-        type="submit" 
-        class="btn-primary ">
-        Envoyer
-    </button>
-</div>
+                <button
+                    type="submit"
+                    class="btn-primary ">
+                    Envoyer
+                </button>
+            </div>
 
         </form>
     </div>

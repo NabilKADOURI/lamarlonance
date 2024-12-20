@@ -22,14 +22,24 @@ require_once __DIR__ . '/../functions/getMessage.php';
 </head>
 
 <body>
-   
+    <?php
+    if (isset($_GET['error'])) {
+        $errorMsg = getMessage(intval($_GET['error']));
+        require_once "template/error_notification.php";
+    }
+
+    if (isset($_GET['success'])) {
+        $successMsg = getMessage(intval($_GET['success']));
+        require_once "template/success_notification.php";
+    }
+    ?>
 
     <!-- Info Tailwind Responsive -->
     <!-- <div id="tailwind-breakpoint-info" class="fixed bottom-2 right-2 text-xs text-gray-600 bg-gray-100 p-2 rounded shadow z-50">
         Taille actuelle : <span id="tailwind-breakpoint-label">Chargement...</span>
-    </div> -->
+    </div>
 
-    <!-- <script>
+    <script>
         function updateTailwindBreakpoint() {
             const width = window.innerWidth;
             const label = document.getElementById('tailwind-breakpoint-label');

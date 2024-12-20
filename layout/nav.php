@@ -44,15 +44,3 @@
     });
   });
 </script>
-
-<?php
-    if (isset($_GET['error'])) {
-        $errorMsg = getMessage(intval($_GET['error']));
-        require_once "template/error_notification.php";
-    }
-
-    if (isset($_GET['success'])) {
-        $successMsg = getMessage(intval($_GET['success']));
-        require_once "template/success_notification.php";
-    }
-    ?>
