@@ -3,7 +3,7 @@
     <div class="flex flex-wrap items-center justify-between container mx-auto py-2 lg:py-4 px-4 sm:px-6 lg:px-12">
       <!-- Logo -->
       <a href="#" id="logo" class="flex items-center space-x-3 ">
-        <img src="/Image/logo-lamarlonance.webp" class="h-12 
+        <img src="Image/logo-lamarlonance.webp" class="h-12 
         " alt="Logo lamarlonance" />
         <span class="self-center text-2xl font-semibold text-gray-800"></span>
       </a>

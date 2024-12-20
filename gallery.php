@@ -19,7 +19,7 @@ require_once 'layout/nav.php';
                 <img 
                     id="mainImage"
                     class="w-full max-w-md md:max-w-lg lg:max-w-xl h-auto object-cover rounded-lg shadow-lg hover:shadow-xl transition duration-300"
-                    src="/Image/bacha.webp"
+                    src="Image/bacha.webp"
                     alt="flashmobe">
             </div>
 
@@ -29,35 +29,35 @@ require_once 'layout/nav.php';
                     <img 
                         onclick="changeImage(this)"
                         class="w-full h-24 sm:h-28 md:h-32 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer"
-                        src="/Image/couple.webp"
+                        src="Image/couple.webp"
                         alt="couple mariage">
                 </div>
                 <div class="relative group">
                     <img 
                         onclick="changeImage(this)"
                         class="w-full h-24 sm:h-28 md:h-32 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer"
-                        src="/Image/dance.webp"
+                        src="Image/dance.webp"
                         alt="duo dance marlon">
                 </div>
                 <div class="relative group">
                     <img 
                         onclick="changeImage(this)"
                         class="w-full h-24 sm:h-28 md:h-32 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer"
-                        src="/Image/eleve.webp"
+                        src="Image/eleve.webp"
                         alt="photo des élèves">
                 </div>
                 <div class="relative group">
                     <img 
                         onclick="changeImage(this)"
                         class="w-full h-24 sm:h-28 md:h-32 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer"
-                        src="/Image/gospel.webp"
+                        src="Image/gospel.webp"
                         alt="photo événement gospel">
                 </div>
                 <div class="relative group">
                     <img 
                         onclick="changeImage(this)"
                         class="w-full h-24 sm:h-28 md:h-32 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer"
-                        src="/Image/bacha.webp"
+                        src="Image/bacha.webp"
                         alt="flashmobe">
                 </div>
             </div>

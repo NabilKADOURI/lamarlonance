@@ -7,7 +7,7 @@
         
         <!-- Logo -->
         <div class="flex justify-center lg:justify-start ">
-          <img src="/Image/footer_img.webp" alt="photo marlon" class="h-full w-full">
+          <img src="Image/footer_img.webp" alt="photo marlon" class="h-full w-full">
         </div>
 
         <!-- Informations de contact -->

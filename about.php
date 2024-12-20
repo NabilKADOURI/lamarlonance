@@ -10,7 +10,7 @@ require_once 'layout/nav.php';
         <div class="flex flex-col lg:flex-row justify-center items-center gap-8">
             <!-- Colonne Image -->
             <div class="w-full lg:w-1/2 my-5 flex justify-center">
-                <img src="/Image/about-marlon.webp" alt="Image de Marlon Kamba" class="w-full h-auto max-w-sm lg:max-w-full  bg-white rounded-lg shadow-md overflow-hidden flex flex-col  items-center group transition-all duration-300 hover:shadow-titre hover:scale-105">
+                <img src="Image/about-marlon.webp" alt="Image de Marlon Kamba" class="w-full h-auto max-w-sm lg:max-w-full  bg-white rounded-lg shadow-md overflow-hidden flex flex-col  items-center group transition-all duration-300 hover:shadow-titre hover:scale-105">
             </div>
             <!-- Colonne Texte -->
             <div class="w-full lg:w-1/2 text-gray-800">

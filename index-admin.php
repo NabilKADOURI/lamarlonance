@@ -5,96 +5,94 @@ require_once __DIR__ . '/classes/Contacts.php';
 ?>
 
 <main class="container mx-auto my-10 px-4">
-    <!-- Titre principal de l'espace administrateur avec un fond personnalisé -->
-    <h1 class="text-center mb-10 py-6 bg-gray-100 rounded-lg shadow-md text-yellow-600 text-3xl font-bold">
+    <!-- Titre principal de l'espace administrateur avec un design plus chic -->
+    <h1 class="text-center mb-10 py-6 bg-yellow-500 text-white rounded-lg shadow-lg text-4xl font-extrabold">
         ESPACE ADMINISTRATEUR
     </h1>
 
-    <div class="flex flex-col lg:flex-row gap-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
         <!-- Section des services -->
-        <div class="w-full lg:w-1/2">
-            <!-- Titre de la section Services -->
-            <h2 class="text-center py-4 bg-yellow-500 rounded-lg shadow-md text-white text-2xl font-bold">
-                Services
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-center mb-6 text-yellow-500 text-3xl font-semibold">
+                Gestion des Services
             </h2>
-            <!-- Tableau pour afficher les services existants -->
-            <table class="table-auto w-full text-left mt-5 bg-white rounded-lg shadow-md">
+            <table class="table-auto w-full text-left bg-gray-100 rounded-lg">
+                <thead>
+                    <tr class="bg-yellow-500 text-white">
+                        <th class="px-6 py-3">Titre</th>
+                        <th class="px-6 py-3">Actions</th>
+                    </tr>
+                </thead>
                 <tbody>
                     <?php
-                    // Récupère tous les services depuis la base de données
                     $services = Service::getServiceAll();
                     foreach ($services as $service) { ?>
                         <tr class="border-b">
-                            <td class="px-4 py-3 text-gray-800">
-                                <h6 class="text-lg font-semibold"><?php echo $service['title_services']; ?></h6>
+                            <td class="px-6 py-4 text-gray-800 font-medium">
+                                <?php echo $service['title_services']; ?>
                             </td>
-                            <td class="px-4 py-3">
-                                <!-- Lien pour modifier le service -->
+                            <td class="px-6 py-4 flex space-x-4 justify-end">
                                 <a href="modify-service.php?id=<?php echo $service['id_services']; ?>"
-                                   class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md">
+                                   class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-full font-medium">
                                     Modifier
                                 </a>
-                            </td>
-                            <td class="px-4 py-3 text-center">
-                                <!-- Formulaire pour supprimer le service -->
-                                <form action="delete-process-services.php" method="POST">
-                                    <input type="hidden" name="id" value="<?php echo $service["id_services"]; ?>">
+                                <form action="delete-process-services.php" method="POST" class="inline">
+                                    <input type="hidden" name="id" value="<?php echo $service['id_services']; ?>">
                                     <input type="submit" value="Supprimer"
-                                           class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md">
+                                           class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-full font-medium">
                                 </form>
                             </td>
                         </tr>
                     <?php } ?>
                 </tbody>
             </table>
-            <!-- Lien pour ajouter un nouveau service -->
-            <a href="add-new-service"
-               class="block mt-6 bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded-md">
+            <a href="add-new-service.php"
+               class="block mt-6 bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded-full font-medium shadow-md">
                 Ajouter un nouveau service
             </a>
         </div>
 
-        <!-- Section de messagerie -->
-        <div class="w-full lg:w-1/2">
-            <!-- Titre de la section Messagerie -->
-            <h2 class="text-center py-4 bg-yellow-500 rounded-lg shadow-md text-white text-2xl font-bold">
-                Messagerie
+        <!-- Section de la messagerie -->
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-center mb-6 text-yellow-500 text-3xl font-semibold">
+                Messagerie des Utilisateurs
             </h2>
-            <!-- Tableau pour afficher les messages reçus -->
-            <table class="table-auto w-full text-left mt-5 bg-white rounded-lg shadow-md">
+            <table class="table-auto w-full text-left bg-gray-100 rounded-lg">
                 <thead>
-                    <tr class="bg-gray-200 text-gray-800">
-                        <th class="px-4 py-2">Nom</th>
-                        <th class="px-4 py-2">Prénom</th>
-                        <th class="px-4 py-2">Email</th>
-                        <th class="px-4 py-2">Date</th>
-                        <th class="px-4 py-2">Voir</th>
-                        <th class="px-4 py-2">Action</th>
+                    <tr class="bg-yellow-500 text-white">
+                        <th class="px-6 py-3">Nom</th>
+                        <th class="px-6 py-3">Prénom</th>
+                        <th class="px-6 py-3">Email</th>
+                        <th class="px-6 py-3">Date</th>
+                        <th class="px-6 py-3">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                    // Récupère tous les messages depuis la base de données
                     $contacts = Contacts::getMessages();
-                    foreach ($contacts as $info) { ?>
+                    foreach ($contacts as $contact) { ?>
                         <tr class="border-b">
-                            <td class="px-4 py-3"><?php echo $info['first_name_contact']; ?></td>
-                            <td class="px-4 py-3"><?php echo $info['last_name_contact']; ?></td>
-                            <td class="px-4 py-3"><?php echo $info['email_contact']; ?></td>
-                            <td class="px-4 py-3"><?php echo $info['date_contact']; ?></td>
-                            <td class="px-4 py-3 text-center">
-                                <!-- Lien pour voir le détail du message -->
-                                <a href="message.php?id=<?php echo $info['id_contact']; ?>"
-                                   class="text-yellow-500 hover:text-yellow-600">
+                            <td class="px-6 py-4 text-gray-800">
+                                <?php echo $contact['last_name_contact']; ?>
+                            </td>
+                            <td class="px-6 py-4 text-gray-800">
+                                <?php echo $contact['first_name_contact']; ?>
+                            </td>
+                            <td class="px-6 py-4 text-gray-800">
+                                <?php echo $contact['email_contact']; ?>
+                            </td>
+                            <td class="px-6 py-4 text-gray-800">
+                                <?php echo $contact['date_contact']; ?>
+                            </td>
+                            <td class="px-6 py-4 flex space-x-4 justify-end">
+                                <a href="message.php?id=<?php echo $contact['id_contact']; ?>"
+                                   class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full font-medium">
                                     Voir
                                 </a>
-                            </td>
-                            <td class="px-4 py-3 text-center">
-                                <!-- Formulaire pour supprimer un message -->
-                                <form action="delete-process-message.php" method="POST">
-                                    <input type="hidden" name="id" value="<?php echo $info["id_contact"]; ?>">
+                                <form action="delete-process-message.php" method="POST" class="inline">
+                                    <input type="hidden" name="id" value="<?php echo $contact['id_contact']; ?>">
                                     <input type="submit" value="Supprimer"
-                                           class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md">
+                                           class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-full font-medium">
                                 </form>
                             </td>
                         </tr>
@@ -104,3 +102,7 @@ require_once __DIR__ . '/classes/Contacts.php';
         </div>
     </div>
 </main>
+
+<?php
+require_once __DIR__ . '/layout/footer.php';
+?>

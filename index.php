@@ -30,7 +30,7 @@ require_once __DIR__ . '/classes/Service.php';
             <!-- Image principale -->
             <div class="flex-1 flex justify-center animate-slideIn">
                 <img class="w-[250px] md:w-[300px] lg:w-[400px] h-auto relative z-10 rounded-full object-cover" 
-                    src="/Image/fond-marlon.webp" alt="image de Marlon">
+                    src="Image/fond-marlon.webp" alt="image de Marlon">
             </div>
         </div>
     </div>
@@ -45,7 +45,7 @@ require_once __DIR__ . '/classes/Service.php';
         <div class="flex flex-col lg:flex-row items-center justify-between lg:space-x-8 space-y-8 lg:space-y-0">
             <!-- Image -->
             <div class="lg:w-1/2 w-full flex justify-center" data-aos="fade-right">
-                <img class="rounded-lg w-full max-w-[500px] h-auto shadow-md" src="/Image/marlon-cours.webp" alt="marlon cours de danse">
+                <img class="rounded-lg w-full max-w-[500px] h-auto shadow-md" src="Image/marlon-cours.webp" alt="marlon cours de danse">
             </div>
             <!-- Texte -->
             <div class="lg:w-1/2 w-full text-center lg:text-left space-y-4" data-aos="fade-left">
