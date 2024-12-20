@@ -21,7 +21,7 @@ require_once __DIR__ . '/classes/Service.php';
                     DANSEUR CHORÉGRAPHE LYON
                 </p>
                 <div class="mt-6">
-                    <a href="#prestations" class="px-6 py-3 bg-[#ff6600] hover:bg-titre text-white hover:text-white rounded-lg shadow-md transition duration-300 font-semibold">
+                    <a href="#prestation" class="px-6 py-3 bg-[#ff6600] hover:bg-titre text-white hover:text-white rounded-lg shadow-md transition duration-300 font-semibold">
                         VOIR LES PRESTATIONS
                     </a>
                 </div>
