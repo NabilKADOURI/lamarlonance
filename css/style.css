@@ -7,13 +7,13 @@
    ============================ */
 
 @layer base {
-  
   /* Typography */
   h1, h2 {
     @apply font-titre text-titre;
   }
+
   h1 {
-    @apply text-4xl md:text-5xl font-bold leading-tight;
+    @apply text-4xl md:text-9xl font-bold leading-tight;
   }
 
   h2 {
@@ -36,19 +36,14 @@
 @layer components {
   /* Buttons */
   .btn-primary {
-    @apply bg-titre text-white font-semibold py-2 px-4 rounded-lg shadow-md 
-    hover:bg-titre focus:outline-none focus:ring-2 focus:ring-yellow-400;
-  }
-
-  .btn-secondary {
-    @apply bg-gray-200 text-gray-800 font-medium py-2 px-4 rounded-lg shadow-sm 
-    hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400;
+    @apply px-6 py-3 bg-[#ff6600] hover:bg-[#e65c00] text-white rounded-lg shadow-md 
+      transition duration-300 font-semibold;
   }
 
   /* Cards */
   .card {
     @apply bg-white rounded-lg shadow-lg p-6 transition-transform transform 
-    hover:scale-105 hover:shadow-[0_4px_10px_rgba(222,187,77,0.6)];
+      hover:scale-105 hover:shadow-[0_4px_10px_rgba(222,187,77,0.6)];
   }
 
   .card-title {
@@ -59,40 +54,29 @@
     @apply text-texte text-base leading-relaxed;
   }
 
-  /* Sections */
-  .section {
-    @apply w-full py-16 px-6 md:px-12 lg:px-20 bg-titre text-white;
-  }
-
-  .section-dark {
-    @apply bg-black text-white py-16 px-6 md:px-12 lg:px-20;
-  }
-
   /* Input Fields */
   .input-field {
-    @apply block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300
-    rounded-lg focus:border-yellow-600 focus:ring focus:ring-yellow-400;
+    @apply block w-full px-4 py-3 bg-gray-50 text-gray-800 border border-[#ff6600] 
+      rounded-lg focus:ring-2 focus:ring-[#e65c00] focus:border-[#e65c00] outline-none;
   }
 
   .form-label {
-    @apply text-sm font-medium text-gray-600 mb-2 block;
+    @apply block text-sm font-medium text-gray-700 mb-2;
   }
 }
 
 @layer utilities {
-  /* Spacing */
-  .space-y-default {
+  /* Utilities */
+  .space-y-default > :not([hidden]) ~ :not([hidden]) {
     @apply space-y-4 md:space-y-6 lg:space-y-8;
   }
 
-  /* Full screen utility */
   .full-screen {
     @apply w-full min-h-screen;
   }
 }
 
-
-
+/* Custom styles */
 .active {
-    color: #ff6600; 
+  color: #ff6600;
 }

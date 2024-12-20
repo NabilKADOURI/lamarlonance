@@ -20,11 +20,11 @@
 
       <!-- Menu  -->
       <div id="navbar-menu" class="hidden w-full sm:flex sm:w-auto justify-center items-center">
-    <ul class="flex flex-col sm:flex-row sm:justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 font-bold text-gray-600">
+    <ul class="flex flex-col md:flex-row sm:justify-center items-center space-y-4 sm:space-y-0 sm:space-x-2 font-bold text-gray-600">
         <li><a href="index.php" class="block py-2 px-4 hover:text-titre <?php echo basename($_SERVER['SCRIPT_NAME']) == 'index.php' ? 'active' : ''; ?>">ACCUEIL</a></li>
         <li><a href="about.php" class="block py-2 px-4 hover:text-titre <?php echo basename($_SERVER['SCRIPT_NAME']) == 'about.php' ? 'active' : ''; ?>">À PROPOS</a></li>
-        <li><a href="#prestation" class="block py-2 px-4 hover:text-titre <?php echo basename($_SERVER['SCRIPT_NAME']) == 'services.php' ? 'active' : ''; ?>">PRESTATIONS</a></li>
-        <li><a href="pricing.php" class="block py-2 px-4 hover:text-titre <?php echo basename($_SERVER['SCRIPT_NAME']) == 'pricing.php' ? 'active' : ''; ?>">GALERIE</a></li>
+        <li><a href="index.php#prestation" class="block py-2 px-4 hover:text-titre <?php echo basename($_SERVER['SCRIPT_NAME']) == 'services-item.php' ? 'active' : ''; ?>">PRESTATIONS</a></li>
+        <li><a href="gallery.php" class="block py-2 px-4 hover:text-titre <?php echo basename($_SERVER['SCRIPT_NAME']) == 'gallery.php' ? 'active' : ''; ?>">GALERIE</a></li>
         <li><a href="contact.php" class="block py-2 px-4 hover:text-titre <?php echo basename($_SERVER['SCRIPT_NAME']) == 'contact.php' ? 'active' : ''; ?>">CONTACT</a></li>
     </ul>
 </div>

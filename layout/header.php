@@ -70,6 +70,7 @@ require_once __DIR__ . '/../functions/getMessage.php';
     </script>
     <script src="https://unpkg.com/flowbite@1.7.0/dist/flowbite.js"></script>
     <script src="node_modules/@iconify/iconify/dist/iconify.min.js"></script>
-    <script src="/lamarlonance/js/script.js"></script>
+    <script src="js/script.js"></script>
+
 </body>
 </html>

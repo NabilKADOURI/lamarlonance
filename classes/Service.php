@@ -82,4 +82,22 @@ class Service
             'image' => $filename
         ]);
     }
+
+    public static function getRandomServiceId($currentId)
+{
+    // Connexion à la base de données
+    $db = Db::getConnection();
+
+    // Préparer une requête pour obtenir un ID aléatoire différent de l'ID actuel
+    $query = $db->prepare("SELECT id_services FROM services WHERE id_services != :currentId ORDER BY RAND() LIMIT 1");
+    $query->execute(['currentId' => $currentId]);
+
+    // Récupérer l'ID
+    $result = $query->fetch(PDO::FETCH_ASSOC);
+
+    // Retourner l'ID si trouvé, sinon retourner le même ID pour éviter les erreurs
+    return $result ? $result['id_services'] : $currentId;
+}
+
+
 }

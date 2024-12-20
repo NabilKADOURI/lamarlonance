@@ -1,13 +1,13 @@
 <footer>
   <!-- Section avec bordure supérieure -->
-  <section >
+  <section class="border-t-4 border-yellow-500">
     <div class="container mx-auto px-4 py-8">
       <!-- Grid Layout -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         
         <!-- Logo -->
-        <div class="flex justify-center lg:justify-start">
-          <img src="/Image/logo-lamarlonance.webp" alt="photo marlon" class="h-32 w-auto">
+        <div class="flex justify-center lg:justify-start ">
+          <img src="/Image/footer_img.webp" alt="photo marlon" class="h-full w-full">
         </div>
 
         <!-- Informations de contact -->
@@ -16,7 +16,7 @@
           <p>Professeur de danse - chorégraphe</p>
           <p class="font-semibold mt-2">Lyon - France</p>
           <p class="mt-4">lamarlonance@gmail.com</p>
-          <p>+33 062 636 08</p>
+          <p>+33 624 881 921</p>
           
           <!-- Réseaux sociaux -->
           <div class="flex space-x-4 mt-4">

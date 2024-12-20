@@ -10,36 +10,32 @@ require_once __DIR__ . '/classes/Service.php';
 <main>
     <!-- Partie Hero -->
     <section class="py-10">
-    <div class="container mx-auto px-4 h-[450px]">
-        <div class="flex flex-col lg:flex-row items-center justify-between space-y-8 lg:space-y-0 lg:space-x-8">
+    <div class="container mx-auto h-[450px] md:h-[550px]">
+        <div class="flex flex-col md:flex-row items-center justify-between space-y-8 lg:space-y-0 lg:space-x-8">
             <!-- Texte principal -->
             <div class="text-center lg:text-left flex-1">
-                <h1 class="text-4xl md:text-6xl font-titre text-titre font-bold leading-tight ">
+                <h1 class="text-4xl sm:text-9xl font-titre text-titre font-bold leading-tight">
                     Lamarlonance
                 </h1>
                 <p class="text-lg md:text-xl text-gray-600 mt-4">
                     DANSEUR CHORÉGRAPHE LYON
                 </p>
                 <div class="mt-6">
-                    <a href="#prestations" class="px-6 py-3 bg-[#ff6600] hover:bg-titre text-white hover:text-white rounded-lg shadow-md transition duration-300">
+                    <a href="#prestations" class="px-6 py-3 bg-[#ff6600] hover:bg-titre text-white hover:text-white rounded-lg shadow-md transition duration-300 font-semibold">
                         VOIR LES PRESTATIONS
                     </a>
                 </div>
             </div>
 
             <!-- Image principale -->
-            <div class="flex-1 flex justify-center">
-                <div class="relative">
-                    <!-- Cercle décoratif -->
-                    <div class="absolute inset-0 w-[300px] h-[300px] md:w-[400px] md:h-[400px] rounded-full bg-[#ff6600] -z-10"></div>
-                    <!-- Image -->
-                    <img class="w-[250px] md:w-[300px] lg:w-[350px] h-auto relative z-10 rounded-full object-cover" 
-                        src="/Image/fond-marlon.webp" alt="image de Marlon">
-                </div>
+            <div class="flex-1 flex justify-center animate-slideIn">
+                <img class="w-[250px] md:w-[300px] lg:w-[400px] h-auto relative z-10 rounded-full object-cover" 
+                    src="/Image/fond-marlon.webp" alt="image de Marlon">
             </div>
         </div>
     </div>
 </section>
+
 
 
 
@@ -90,15 +86,15 @@ require_once __DIR__ . '/classes/Service.php';
 
 <!-- Section Contact -->
 <section>
-    <div class="bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 text-white py-16 border-y-8  border-titre">
+    <div class="bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 text-white py-10 border-y-8  border-titre">
         <div class="container mx-auto flex flex-col items-center space-y-8 text-center">
             <!-- Titre -->
-            <h2 class="text-3xl md:text-4xl font-bold leading-tight text-white">
+            <h2 class="text-3xl md:text-4xl font-medium  text-white">
                 Vous avez un spectacle ou un évènement à chorégraphier ?
             </h2>
             <!-- Bouton -->
             <a href="contact.php" 
-                class="bg-white text-orange-600 font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-titre hover:text-white transition duration-300 transform hover:scale-105 border-4 border-titre">
+                class="bg-white font-bold text-orange-600  py-3 px-8 rounded-full shadow-lg hover:bg-titre hover:text-white transition duration-300 transform hover:scale-105 border-4 border-titre">
                 Contactez-moi
             </a>
         </div>

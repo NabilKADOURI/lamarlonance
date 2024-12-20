@@ -14,7 +14,7 @@ require_once 'layout/nav.php';
             </div>
             <!-- Colonne Texte -->
             <div class="w-full lg:w-1/2 text-gray-800">
-                <h1 class="text-3xl font-bold  mb-4">Qui je suis ?</h1>
+            <h1 class="text-4xl font-bold text-center mb-6">Qui je-suis?</h1>
                 <p class="mb-4">
                     Hey ! Je m'appelle Marlon KAMBA. Professeur de danse depuis près de 17 ans maintenant.
                 </p>
@@ -30,7 +30,7 @@ require_once 'layout/nav.php';
                 <p class="mb-4">
                     Si vous souhaitez apprendre et évoluer avec un champion du monde de Bachata, certifié par le ministre de la culture de la République Dominicaine, n’hésitez plus.
                 </p>
-                <p class="font-semibold text-yellow-700">
+                <p class="font-semibold text-[#ff6600] text-center">
                     Lamarolance est là pour vous accompagner !
                 </p>
             </div>
