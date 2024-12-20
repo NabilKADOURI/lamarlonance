@@ -1,10 +1,33 @@
 <?php
 
-$title = "lamarlonance";
-require_once __DIR__ . '/layout/header.php';
-require_once __DIR__ . '/layout/nav.php';
-require_once __DIR__ . '/classes/Service.php';
+$title = "Lamarlonance";
 
+// Inclusion sécurisée des fichiers nécessaires
+if (file_exists(__DIR__ . '/layout/header.php')) {
+    require_once __DIR__ . '/layout/header.php';
+} else {
+    die("Erreur : Fichier header.php introuvable.");
+}
+
+if (file_exists(__DIR__ . '/layout/nav.php')) {
+    require_once __DIR__ . '/layout/nav.php';
+} else {
+    die("Erreur : Fichier nav.php introuvable.");
+}
+
+if (file_exists(__DIR__ . '/classes/Service.php')) {
+    require_once __DIR__ . '/classes/Service.php';
+} else {
+    die("Erreur : Fichier Service.php introuvable.");
+}
+
+// Gestion des erreurs lors de la récupération des services
+try {
+    $services = Service::getServiceAll();
+} catch (Exception $e) {
+    error_log($e->getMessage()); // Journalisation des erreurs
+    $services = []; // Défaut : tableau vide
+}
 ?>
 
 <main>
@@ -104,5 +127,9 @@ require_once __DIR__ . '/classes/Service.php';
 </main>
 
 <?php
-require_once __DIR__ . '/layout/footer.php';
+if (file_exists(__DIR__ . '/layout/footer.php')) {
+    require_once __DIR__ . '/layout/footer.php';
+} else {
+    die("Erreur : Fichier footer.php introuvable.");
+}
 ?>
