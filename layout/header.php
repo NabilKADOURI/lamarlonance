@@ -35,11 +35,11 @@ require_once __DIR__ . '/../functions/getMessage.php';
     ?>
 
     <!-- Info Tailwind Responsive -->
-    <div id="tailwind-breakpoint-info" class="fixed bottom-2 right-2 text-xs text-gray-600 bg-gray-100 p-2 rounded shadow z-50">
+    <!-- <div id="tailwind-breakpoint-info" class="fixed bottom-2 right-2 text-xs text-gray-600 bg-gray-100 p-2 rounded shadow z-50">
         Taille actuelle : <span id="tailwind-breakpoint-label">Chargement...</span>
-    </div>
+    </div> -->
 
-    <script>
+    <!-- <script>
         function updateTailwindBreakpoint() {
             const width = window.innerWidth;
             const label = document.getElementById('tailwind-breakpoint-label');
@@ -61,7 +61,7 @@ require_once __DIR__ . '/../functions/getMessage.php';
 
         updateTailwindBreakpoint();
         window.addEventListener('resize', updateTailwindBreakpoint);
-    </script>
+    </script> -->
 
     <!-- Scripts JS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
