@@ -1,10 +1,9 @@
-<header class="sticky left-0 top-0 z-50 w-full ">
+<header class="sticky left-0 top-0 z-50 w-full overflow-x-hidden">
   <nav class="top-0 left-0 w-full bg-white/30 backdrop-blur-md z-50 border-b-2 border-yellow-500">
     <div class="flex flex-wrap items-center justify-between container mx-auto py-2 lg:py-4 px-4 sm:px-6 lg:px-12">
       <!-- Logo -->
       <a href="index.php" id="logo" class="flex items-center space-x-3 ">
-        <img src="Image/logo-lamarlonance.webp" class="h-12 
-        " alt="Logo lamarlonance" />
+        <img src="Image/logo-lamarlonance.webp" class="h-12 max-w-full" alt="Logo lamarlonance" />
         <span class="self-center text-2xl font-semibold text-gray-800"></span>
       </a>
 

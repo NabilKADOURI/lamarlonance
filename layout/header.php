@@ -21,7 +21,8 @@ require_once __DIR__ . '/../functions/getMessage.php';
     <title><?php echo $title ?? "Lamalonance" ?></title>
 </head>
 
-<body>
+<body class="overflow-x-hidden">
+
     <?php
     if (isset($_GET['error'])) {
         $errorMsg = getMessage(intval($_GET['error']));
