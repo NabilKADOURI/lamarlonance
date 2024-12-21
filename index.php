@@ -9,11 +9,11 @@ require_once __DIR__ . '/classes/Service.php';
 
 <main class="overflow-x-hidden">
     <!-- Section Hero -->
-    <section class="py-10">
+    <section class="pt-10 md:pt-0">
         <div class="container mx-auto h-[450px] md:h-[550px]">
-            <div class="flex flex-col md:flex-row items-center justify-between space-y-8 lg:space-y-0 lg:space-x-8">
+            <div class="flex flex-col md:flex-row items-center justify-around space-y-8 lg:space-y-0  container mx-auto">
                 <!-- Texte principal -->
-                <div class="text-center lg:text-left ">
+                <div class="text-center lg:text-left mb-5 md:mb-0 ">
                     <h1 class="text-4xl sm:text-9xl font-titre text-titre font-bold leading-tight">
                         Lamarlonance
                     </h1>
