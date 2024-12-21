@@ -1,77 +1,118 @@
-# **Lamarlonance**
+# **Lamarlonance** 🌟
 
-## **Description**
-Lamrlonance est un site vitrine conçu pour un chorégraphe professionnel. Il présente ses prestations avec un visuel attrayant sous forme de photos dynamiques, un espace dédié pour les contacts, une section "À propos", et une interface d'administration.
-
----
-
-## **Fonctionnalités**
-
-### **Partie publique**
-- **Galerie dynamique** : Les photos des prestations sont récupérées depuis une base de données et affichées de manière attrayante.
-- **Formulaire de contact** : Permet aux utilisateurs d'envoyer des messages directement au chorégraphe.
-- **À propos** : Présentation détaillée du chorégraphe et de son parcours.
-
-### **Partie administration**
-- **Gestion des photos** : Ajouter, modifier ou supprimer les photos des prestations.
-- **Gestion des messages** : Consulter les messages reçus via le formulaire de contact et les supprimer si nécessaire.
+## **📝 Description**
+**Lamarlonance** est un site vitrine conçu pour un chorégraphe professionnel. Il présente ses prestations avec un visuel attrayant sous forme de photos dynamiques, un espace dédié pour les contacts, une section "À propos", et une interface d'administration.
 
 ---
 
-## **Technologies utilisées**
-- **Back-end** : PHP (programmation orientée objet).
-- **Front-end** : Twig pour la gestion des vues.
-- **Base de données** : MySQL pour le stockage des photos, des informations et des messages.
-- **Serveur web** : Apache (WAMP ou XAMPP recommandé pour l'environnement local).
+## **🌟 Fonctionnalités principales**
+
+### **🎭 Partie publique**
+- **🖼️ Galerie dynamique :** Les photos des prestations sont récupérées depuis une base de données et affichées de manière attrayante.
+- **📩 Formulaire de contact :** Permet aux utilisateurs d'envoyer des messages directement au chorégraphe.
+- **📖 À propos :** Présentation détaillée du chorégraphe et de son parcours.
+
+### **🔒 Partie administration**
+- **📂 Gestion des photos :** Ajouter, modifier ou supprimer les photos des prestations.
+- **📝 Gestion des messages :** Consulter les messages reçus via le formulaire de contact et les supprimer si nécessaire.
 
 ---
 
-## **Installation**
-
-### **Prérequis**
-- PHP 7.4 ou supérieur
-- MySQL
+## **📋 Prérequis**
+- 🌐 Serveur web local ou distant (Apache, Nginx, etc.)
+- 🐘 PHP version 7.4 ou supérieure
+- 🛢️ Base de données MySQL
+- 🖥️ Node.js pour compiler les fichiers CSS avec Tailwind (optionnel)
 - Composer (pour la gestion des dépendances)
-- Serveur Apache
-
-### **Étapes**
-1. **Cloner le projet** :
-   ```bash
-   git clone https://github.com/NabilKADOURI/lamarlonance.git
-   cd lamarlonance
-
-## **Configurer la base de données**
-
-1. Importez le fichier SQL fourni dans le dossier `/database` pour configurer les tables nécessaires.
-2. Mettez à jour les identifiants de connexion dans le fichier `config/database.php`.
 
 ---
 
-## **Installer les dépendances**
+## **🚀 Installation**
 
+### **Étape 1 : Cloner ou copier les fichiers du projet**
+Téléchargez ou clonez ce dépôt dans le répertoire racine de votre serveur web :
+```bash
+git clone <URL_DU_DEPOT>
+```
+
+### **Étape 2 : Configuration de la base de données**
+1. Créez une base de données MySQL.
+2. Importez les données depuis le fichier `lamarlonance.sql` :
+   ```bash
+   mysql -u votre_utilisateur -p nom_de_la_base < lamarlonance.sql
+   ```
+3. Configurez les informations de connexion à la base dans le fichier `db.ini-template` :
+   ```ini
+   [database]
+   host = "localhost"
+   user = "votre_utilisateur"
+   password = "votre_mot_de_passe"
+   dbname = "nom_de_la_base"
+   ```
+   Renommez le fichier en `db.ini` après modification.
+
+### **Étape 3 : Installer les dépendances PHP**
+Utilisez Composer pour installer les dépendances nécessaires :
 ```bash
 composer install
 ```
 
-## **Lancer le projet**
-1. Placez le projet dans le répertoire de votre serveur web local.
-2. Accédez au site via http://localhost/lamarlonance.
+### **Étape 4 : Compiler les fichiers CSS (Optionnel)**
+Pour utiliser Tailwind CSS, vous pouvez recompiler les fichiers avec Node.js :
+```bash
+npm install
+npx tailwindcss -i ./style.css -o ./output.css --watch
+```
 
+### **Étape 5 : Démarrer le serveur local**
+Lancez un serveur PHP local si vous êtes en mode développement :
+```bash
+php -S localhost:8000
+```
+Accédez au projet via l'URL : `http://localhost:8000`
 
-# **Utilisation**
-## **Accéder à l'interface administrateur**
-- Rendez-vous sur /admin.
-- Identifiez-vous avec les identifiants par défaut fournis dans la base de données.
+---
 
-## **Ajouter, modifier ou supprimer des photos**
-- Accédez à la section "Gestion des prestations".
+## **🛠️ Organisation des fichiers**
+### **📄 Fichiers principaux**
+- **index.php** : Page d'accueil principale.
+- **about.php** : Page "À propos".
+- **prestation.php** : Liste des prestations.
+- **gallery.php** : Galerie de photos.
+- **contact.php / contact_form.php** : Pages et logique du formulaire de contact.
+- **services-item.php** : Composants pour afficher les services individuellement.
 
-## **Consulter ou supprimer des messages**
-- Accédez à la section "Messages".
+### **🛠️ Fichiers administratifs**
+- **index-admin.php** : Tableau de bord administrateur.
+- **admin.php** : Interface principale d'administration.
+- **add-process-service.php** : Script pour ajouter des services.
+- **modify-service.php** : Interface pour modifier un service.
+- **modify-process-services.php** : Script pour traiter les modifications.
+- **delete-process-services.php** : Script pour supprimer des services.
+- **delete-process-message.php** : Supprimer un message de contact.
+- **admin-process.php** : Traitement des actions administratives.
 
-# **Code d'exemple**
-## **Afficher les photos dynamiques (Twig)**
+### **💻 Fichiers backend**
+- **Db.php** : Classe gérant la connexion à la base de données.
+- **TextUtils.php / utils.php** : Fonctions utilitaires.
+- **Contacts.php** : Gestion des messages de contact.
+- **FileUpload.php** : Gestion des téléversements de fichiers.
 
+### **🎨 Fichiers CSS et JavaScript**
+- **aos.css** : Animations scroll AOS.
+- **output.css** : Fichier compilé de Tailwind CSS.
+- **owl.carousel.min.css** : Styles pour le carrousel.
+- **style.css** : Fichier principal de styles avec Tailwind et personnalisations.
+
+### **⚙️ Configuration et autres**
+- **db.ini-template** : Modèle de configuration de la base de données.
+- **lamarlonance.sql** : Script SQL pour initialiser la base de données.
+- **.gitignore** : Liste des fichiers ignorés (inclut `db.ini`).
+
+---
+
+## **💡 Code d'exemple**
+### **Afficher les photos dynamiques (Twig)**
 ```html
 <div class="w-full md:w-1/2 lg:w-1/4 p-4" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
@@ -85,9 +126,9 @@ composer install
         </div>
     </div>
 </div>
-
 ```
-## **Traitement du formulaire de contact (PHP)**
+
+### **Traitement du formulaire de contact (PHP)**
 ```php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = htmlspecialchars($_POST['name']);
@@ -100,5 +141,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo "Message envoyé avec succès !";
 }
 ```
-# **Auteur**
-Développé par Nabil KADOURI.
+
+---
+
+## **✏️ Personnalisation**
+Vous pouvez :
+- Modifier les fichiers CSS pour adapter le design.
+- Ajouter de nouveaux services via l'interface admin.
+- Étendre la logique en ajoutant de nouvelles pages (exemple : blog, avis des clients).
+
+---
+
+## **👩‍💻 Développement**
+Pour contribuer ou améliorer le projet, utilisez un environnement de développement comme **Visual Studio Code**. Activez les extensions pour PHP, MySQL et Tailwind CSS afin de faciliter le développement.
+
+---
+
+## **💬 Remerciements**
+Développé par Nabil KADOURI. Merci d'utiliser **Lamarlonance** ! Si vous avez des questions ou suggestions, n'hésitez pas à contribuer ou à soumettre un rapport d'erreur.
